@@ -1,83 +1,79 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Basic reset for consistency */
+* {
     margin: 0;
-}
-
-.container {
-    text-align: center;
-    width: 300px;
-    height: 500px;
-    border-radius: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    background-color: #000;
-    position: relative;
-    overflow: hidden;
-}
-
-.screen {
-    background-color: #f9f9f9;
-    width: 92%;
-    height: 88%;
-    margin: auto;
-    margin-top: 6%;
-    border-radius: 20px;
-    padding: 20px;
+    padding: 0;
     box-sizing: border-box;
-    position: relative;
-    color: #333;
 }
 
-.camera-notch {
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 10px;
-    background-color: #333;
-    border-radius: 5px;
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Tablet frame styling */
+.tablet-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #333;  /* Dark frame color */
+    border-radius: 20px;  /* Rounded edges for the tablet look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+    max-width: 320px;
+    max-height: 480px;
+}
+
+/* Main tablet content styling */
+.tablet {
+    width: 280px;  /* Compact width */
+    height: 400px;  /* Compact height */
+    max-width: 100%;
+    padding: 15px;
+    background-color: #fff;  /* White background inside tablet */
+    border-radius: 15px;
+    text-align: center;
 }
 
 h1 {
-    font-size: 1.2rem;
-    margin: 0;
-    color: #007bff;
+    color: #333;  /* Dark text for contrast */
+    font-size: 16px;  /* Adjusted font size */
+    margin-bottom: 10px;
 }
 
-#video {
-    width: 100%;
-    border-radius: 15px;
-    margin: 10px 0;
-}
-
-button {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 16px;
-    color: white;
-    background-color: #007bff;
+/* Button styling */
+#startButton {
+    padding: 8px 16px;
+    background-color: #007bff;  /* Blue color for the button */
+    color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    font-size: 14px;  /* Adjusted button font size */
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+#startButton:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
 }
 
-#output {
-    margin-top: 15px;
-    font-size: 16px;
-    color: #333;
-    padding: 10px;
-    background-color: #e0e0e0;
+/* Video and canvas styling */
+video, canvas {
     border-radius: 8px;
+    width: 100%;
+    height: auto;
 }
+
+p#status {
+    color: #555;  /* Light gray for status text */
+    margin-top: 10px;
+    font-size: 12px;  /* Smaller font for status text */
+}
+
+
 
 

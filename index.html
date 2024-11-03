@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BioTablet Face Recognition</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script> <!-- Correct inclusion of Face API -->
-    <script defer src="script.js"></script> <!-- Your custom script -->
+    <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@latest/dist/face-api.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="camera-notch"></div>
-        <div class="screen">
-            <h1>BioTablet Face Recognition</h1>
-            <video id="video" autoplay muted></video>
-            <canvas id="canvas" style="display: none;"></canvas>
-            <button id="startButton">Scan Face</button>
-            <div id="output">Output will appear here</div>
+    <div class="tablet-frame">
+        <div class="tablet">
+            <h1>BioTablet Facial Recognition</h1>
+            <button id="startButton">Start Face Scan</button>
+            <video id="video" width="640" height="480" autoplay muted></video>
+            <canvas id="overlay" width="640" height="480"></canvas>
+            <p id="status">Status: Waiting to start...</p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
+
 
