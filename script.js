@@ -39,6 +39,10 @@ async function startFaceScan() {
 window.onload = async () => {
     await loadModels();
     startCamera();
+
+    // Add event listener to the button after the models are loaded
+    document.getElementById('startButton').addEventListener('click', startFaceScan);
 };
+
 
 
