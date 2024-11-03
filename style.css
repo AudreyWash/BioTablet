@@ -1,0 +1,89 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 300px;
+    height: 500px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Screen styling to simulate the tablet display */
+.screen {
+    background-color: #f9f9f9;
+    width: 92%;
+    height: 88%;
+    margin: auto;
+    margin-top: 6%;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    color: #333;
+}
+
+/* Simulate camera notch */
+.camera-notch {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Tablet title */
+h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #007bff;
+}
+
+/* Video styling for camera view */
+#video {
+    width: 100%;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+/* Buttons styling */
+button {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#output {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioTablet Face Recognition</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load Face API.js from CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Camera notch at the top of the tablet -->
+        <div class="camera-notch"></div>
+
+        <!-- Tablet screen area -->
+        <div class="screen">
+            <h1>BioTablet Face Recognition</h1>
+            <video id="video" autoplay muted></video>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <button onclick="startFaceScan()">Scan Face</button>
+            <div id="output">Output will appear here</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
