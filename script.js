@@ -20,18 +20,21 @@ async function startCamera() {
     }
 }
 
-// Detect faces in the video feed
+// Detect faces in the video feed continuously
 async function startFaceScan() {
     const video = document.getElementById("video");
     const output = document.getElementById("output");
 
-    const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
+    // Continuous face detection every 100 milliseconds
+    setInterval(async () => {
+        const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
 
-    if (detections.length > 0) {
-        output.innerText = "Face detected!";
-    } else {
-        output.innerText = "No face detected!";
-    }
+        if (detections.length > 0) {
+            output.innerText = "Face detected!";
+        } else {
+            output.innerText = "No face detected!";
+        }
+    }, 100); // Adjust the interval as needed
 }
 
 // Load models and start the camera on page load
@@ -39,4 +42,5 @@ window.onload = async () => {
     await loadModels();
     startCamera();
 };
+
 
