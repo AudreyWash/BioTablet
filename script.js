@@ -1,5 +1,3 @@
-// script.js
-
 // Load Face API models
 async function loadModels() {
     await faceapi.nets.tinyFaceDetector.loadFromUri('https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/weights');
